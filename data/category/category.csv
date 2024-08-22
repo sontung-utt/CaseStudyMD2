@@ -1,0 +1,24 @@
+CAccessory,1,Tai nghe
+CDeviceVisual,2,Tivi
+CFurniture,4,Bàn là
+CFurniture,5,Tủ lạnh
+CFurniture,6,Máy giặt
+CFurniture,7,Điều hòa
+CFurniture,8,Cân điện tử
+CElectronic,9,Điện thoại
+CElectronic,10,Máy nghe nhạc
+CDeviceVisual,11,Máy quay
+CDeviceVisual,12,Máy VR
+CElectronic,13,Máy chơi game
+CAccessory,14,Ốp điện thoại
+CAccessory,15,Loa
+CAccessory,16,Đài
+CAccessory,17,Modem
+CFurniture,18,Bếp từ
+CFurniture,19,Bếp điện
+CFurniture,20,Máy hút bụi
+CFurniture,21,Đồng hồ
+CFurniture,22,Quạt phun sương
+CElectronic,23,Máy tính bàn
+CElectronic,24,Đồng hồ đeo tay
+CElectronic,25,Máy tính bảng

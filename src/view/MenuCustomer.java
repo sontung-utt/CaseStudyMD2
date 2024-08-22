@@ -4,12 +4,14 @@ import input.Input;
 import manager.CustomerManager;
 import model.person.Customer;
 import validate.Validate;
+import view.searchUser.customer.MenuSearchCustomer;
 
 import java.util.List;
 
 public class MenuCustomer {
 
     CustomerManager customerManager = new CustomerManager();
+    MenuSearchCustomer menuSearchCustomer = new MenuSearchCustomer();
     public void showMenuCustomer(){
         int choice;
         do {
@@ -36,6 +38,7 @@ public class MenuCustomer {
                     showAllCustomer();
                     break;
                 case 5:
+                    menuSearchCustomer.showMenuSearchCustomer();
                     break;
                 case 0:
                     System.out.println("Thoát chương trình quản lý khách hàng!");

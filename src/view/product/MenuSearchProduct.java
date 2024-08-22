@@ -5,10 +5,7 @@ import manager.BrandManager;
 import manager.CategoryManager;
 import manager.ProductManager;
 import model.brand.Brand;
-import model.category.CAccessory;
-import model.category.CDeviceVisual;
-import model.category.CElectronic;
-import model.category.CFurniture;
+import model.category.*;
 import model.product.Product;
 
 import java.util.List;
@@ -88,7 +85,9 @@ public class MenuSearchProduct {
                 } else {
                     System.out.println("Dánh sách sản phẩm của " + categoryManager.findCategoryById(idFurniture).getName());
                     for (Product product : products1){
-                        System.out.println(product);
+                        Brand brand = brandManager.findBrandById(product.getIdBrand());
+                        Category category = categoryManager.findCategoryById(product.getIdCategory());
+                        System.out.println(product + "\nLoại sản phẩm: " + category.getName() + "\nThương hiệu: " + brand.getName());
                     }
                 }
                 break;
@@ -114,7 +113,9 @@ public class MenuSearchProduct {
                 } else {
                     System.out.println("Danh sách sản phẩm của " + categoryManager.findCategoryById(idElectronic).getName());
                     for (Product product : products2) {
-                        System.out.println(product);
+                        Brand brand = brandManager.findBrandById(product.getIdBrand());
+                        Category category = categoryManager.findCategoryById(product.getIdCategory());
+                        System.out.println(product + "\nLoại sản phẩm: " + category.getName() + "\nThương hiệu: " + brand.getName());
                     }
                 }
                 break;
@@ -140,7 +141,9 @@ public class MenuSearchProduct {
                 } else {
                     System.out.println("Danh sách sản phẩm của " + categoryManager.findCategoryById(idDevice).getName());
                     for (Product product : products3){
-                        System.out.println(product);
+                        Brand brand = brandManager.findBrandById(product.getIdBrand());
+                        Category category = categoryManager.findCategoryById(product.getIdCategory());
+                        System.out.println(product + "\nLoại sản phẩm: " + category.getName() + "\nThương hiệu: " + brand.getName());
                     }
                 }
                 break;
@@ -166,7 +169,9 @@ public class MenuSearchProduct {
                 } else {
                     System.out.println("Danh sách sản phẩm của " + categoryManager.findCategoryById(idAccessory).getName());
                     for (Product product : products4){
-                        System.out.println(product);
+                        Brand brand = brandManager.findBrandById(product.getIdBrand());
+                        Category category = categoryManager.findCategoryById(product.getIdCategory());
+                        System.out.println(product + "\nLoại sản phẩm: " + category.getName() + "\nThương hiệu: " + brand.getName());
                     }
                 }
                 break;
@@ -199,7 +204,9 @@ public class MenuSearchProduct {
         } else {
             System.out.println("Danh sách sản phẩm thương hiệu " + brandManager.findBrandById(id).getName());
             for (Product product : products){
-                System.out.println(product);
+                Brand brand = brandManager.findBrandById(product.getIdBrand());
+                Category category = categoryManager.findCategoryById(product.getIdCategory());
+                System.out.println(product + "\nLoại sản phẩm: " + category.getName() + "\nThương hiệu: " + brand.getName());
             }
         }
     }
@@ -232,20 +239,27 @@ public class MenuSearchProduct {
         } else {
             System.out.println("Danh sách sản phẩm có khoảng giá từ " + min + " đến " + max);
             for (Product product : list) {
-                System.out.println(product);
+                Brand brand = brandManager.findBrandById(product.getIdBrand());
+                Category category = categoryManager.findCategoryById(product.getIdCategory());
+                System.out.println(product + "\nLoại sản phẩm: " + category.getName() + "\nThương hiệu: " + brand.getName());
             }
         }
     }
 
     private void searchMaxPriceProduct() {
         System.out.println("=====Tìm kiếm sản phẩm có giá cao nhất=====");
-        System.out.println(productManager.getMaxPriceProduct());
+        Product product = productManager.getMaxPriceProduct();
+        Brand brand = brandManager.findBrandById(product.getIdBrand());
+        Category category = categoryManager.findCategoryById(product.getIdCategory());
+        System.out.println(product + "\nLoại sản phẩm: " + category.getName() + "\nThương hiệu: " + brand.getName());
     }
 
     private void sortProductByPrice() {
         List<Product> products = productManager.getSortProductByPrice();
         for (Product product : products) {
-            System.out.println(product);
+            Brand brand = brandManager.findBrandById(product.getIdBrand());
+            Category category = categoryManager.findCategoryById(product.getIdCategory());
+            System.out.println(product + "\nLoại sản phẩm: " + category.getName() + "\nThương hiệu: " + brand.getName());
         }
     }
 }

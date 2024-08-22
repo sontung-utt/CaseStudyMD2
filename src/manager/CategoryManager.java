@@ -37,6 +37,7 @@ public class CategoryManager implements IManager<Category>{
 
     @Override
     public int findIndexById(int id) {
+        this.categoryList = this.readWriteCategory.readCategory();
         for (int i = 0; i < categoryList.size(); i++) {
             if (categoryList.get(i).getId() == id) {
                 return i;
@@ -52,6 +53,7 @@ public class CategoryManager implements IManager<Category>{
     }
 
     public List<CFurniture> getCategoryFurniture(){
+        this.categoryList = this.readWriteCategory.readCategory();
         List<CFurniture> list = new ArrayList<>();
         for (Category category : categoryList){
             if (category instanceof CFurniture){
@@ -101,6 +103,7 @@ public class CategoryManager implements IManager<Category>{
     }
 
     public Category findCategoryById(int id){
+        this.categoryList = this.readWriteCategory.readCategory();
         for (Category category : categoryList){
             if (category.getId() == id){
                 return category;

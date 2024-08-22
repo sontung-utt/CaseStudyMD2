@@ -88,7 +88,8 @@ public class Person {
     }
 
     public String toString() {
-        return "\nTên: " + name +
+        return  "\nId: " + id +
+                "\nTên: " + name +
                 "\nTuổi: " + age +
                 "\nGiới tính: " + gender +
                 "\nĐịa chỉ: " + address +

@@ -152,7 +152,8 @@ public class MenuStaff {
         System.out.println("=====Hiển thị danh sách nhân sự=====");
         List<Staff> staffList = staffManager.getAll();
         for (Staff staff : staffList){
-            System.out.println(staff);
+            Department department = departmentManager.findDepartmentById(staff.getIdDepartments());
+            System.out.println(staff + "\nPhòng ban: " + department.getName());
         }
     }
 }

@@ -64,6 +64,7 @@ public class CategoryManager implements IManager<Category>{
     }
 
     public List<CElectronic> getCategoryElectronic(){
+        this.categoryList = this.readWriteCategory.readCategory();
         List<CElectronic> list = new ArrayList<>();
         for (Category category : categoryList){
             if (category instanceof CElectronic){
@@ -74,6 +75,7 @@ public class CategoryManager implements IManager<Category>{
     }
 
     public List<CDeviceVisual> getCategoryDeviceVisual(){
+        this.categoryList = this.readWriteCategory.readCategory();
         List<CDeviceVisual> list = new ArrayList<>();
         for (Category category : categoryList){
             if (category instanceof CDeviceVisual){
@@ -84,6 +86,7 @@ public class CategoryManager implements IManager<Category>{
     }
 
     public List<CAccessory> getCategoryAccessory(){
+        this.categoryList = this.readWriteCategory.readCategory();
         List<CAccessory> list = new ArrayList<>();
         for (Category category : categoryList){
             if (category instanceof CAccessory){

@@ -14,7 +14,7 @@ public class MenuEditCategory {
         int idEdit = Input.inputInteger();
         Category oldCategory = categoryManager.findCategoryById(idEdit);
         if (oldCategory != null){
-            System.out.println("Loại sản phẩm cũ: \n" + oldCategory);
+            System.out.println("Thông tin loại sản phẩm hiện tại\n" + oldCategory);
             //System.out.println("Loại của loại sản phẩm: " + oldCategory.getClass().getName());
             Category newCategory = null;
             if (oldCategory instanceof CAccessory){

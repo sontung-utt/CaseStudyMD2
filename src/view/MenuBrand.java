@@ -55,7 +55,9 @@ public class MenuBrand {
         System.out.println("=====Sửa thông tin thương hiệu=====");
         System.out.print("Nhập mã thương hiệu muốn sửa: ");
         int idEdit = Input.inputInteger();
-        if (brandManager.findIndexById(idEdit) != -1){
+        Brand oldBrand = brandManager.findBrandById(idEdit);
+        if (oldBrand != null){
+            System.out.println("Thông tin thương hiệu hiện tại\n" + oldBrand);
             System.out.print("Nhập tên thương hiệu: ");
             String name = Input.inputString();
             Brand brand = new Brand(idEdit,name);

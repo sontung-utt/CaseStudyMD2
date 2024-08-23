@@ -1,3 +1,4 @@
+import view.MainMenu;
 import view.MainMenuStaff;
 import view.MenuStore;
 
@@ -5,7 +6,7 @@ import view.MenuStore;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        MainMenuStaff mainMenuStaff = new MainMenuStaff();
-        mainMenuStaff.showMainMenu();
+        MainMenu mainMenu = new MainMenu();
+        mainMenu.showMainMenu();
     }
 }

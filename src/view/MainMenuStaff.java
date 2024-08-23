@@ -6,7 +6,7 @@ public class MainMenuStaff {
     MenuCompany menuCompany = new MenuCompany();
     MenuStore menuStore = new MenuStore();
     MenuCustomer menuCustomer = new MenuCustomer();
-    public void showMainMenu() {
+    public void showMainMenuStaff() {
         int choice;
         do {
             System.out.println("==========Trang chủ nhân sự==========");
@@ -27,7 +27,7 @@ public class MainMenuStaff {
                     menuCustomer.showMenuCustomer();
                     break;
                 case 0:
-                    System.out.println("Thoát chương trình quản lý thương hiệu!");
+                    System.out.println("Thoát trang chủ nhân sự!");
                     break;
                 default:
                     System.out.println("Không có lựa chọn phù hợp!");
